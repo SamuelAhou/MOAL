@@ -1,7 +1,7 @@
 #include <stdio.h>        
-#include "Functions/UF.c"        
-#include "Functions/LAF.c"        
-#include "Functions/Tools.h"
+#include "src/UF.c"        
+#include "src/LAF.c"        
+#include "src/Tools.h"
 
 
 int main(int argc, char* argv[]) {
