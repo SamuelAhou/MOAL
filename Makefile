@@ -10,8 +10,8 @@ all : main
 main : LAF UF
 	$(CC) LAF.o UF.o -o main $(LIB)
 
-LAF.o : Functions/LAF.c
-	gcc ./Functions/LAF.c -c ./Functions/LAF.o $(LIB)
+LAF.o : src/LAF.c
+	gcc ./src/LAF.c -c LAF.o $(LIB)
 
-UF.o : Functions/UF.c
-	gcc ./Functions/LAF.c -c ./Functions/LAF.o $(LIB)
+UF.o : src/UF.c
+	gcc ./src/UF.c -c UF.o $(LIB)
