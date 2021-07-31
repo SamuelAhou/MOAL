@@ -2,11 +2,16 @@
 // Created by Samuel on 10/07/2021.
 //
 
-
 #ifndef LAMO_LAF_H
 #define LAMO_LAF_H
 
+typedef struct factorizationPair
+{
 
+    float **F;
+    float **G;
+
+} Pair;
 
 /**
  * Computes matrix addition of A and B
@@ -16,8 +21,7 @@
  * @param B second matrix
  * @return Pointer to result matrix i.e. A+B
  */
-float** add(size_t m, size_t n, float** A, float** B);
-
+float **add(size_t m, size_t n, float **A, float **B);
 
 /**
  * Computes matrix subtraction of A and B
@@ -27,8 +31,7 @@ float** add(size_t m, size_t n, float** A, float** B);
  * @param B second matrix
  * @return Pointer to result matrix i.e. A-B
  */
-float** sub(size_t m, size_t n, float** A, float** B);
-
+float **sub(size_t m, size_t n, float **A, float **B);
 
 /**
  * Scales matrix A by the scalar factor a
@@ -38,8 +41,7 @@ float** sub(size_t m, size_t n, float** A, float** B);
  * @param a scalar factor
  * @return Pointer to the scaled matrix i.e. a*A
  */
-float** scale(size_t m, size_t n, float** A, float a);
-
+float **scale(size_t m, size_t n, float **A, float a);
 
 /**
  * Computes the p-norm of x
@@ -48,8 +50,7 @@ float** scale(size_t m, size_t n, float** A, float a);
  * @param p precise the type of norm to compute
  * @return P-norm of x i.e. [ sum i=0 to size ( | x[i] |^p) ]^ 1/p
  */
-float norm(float** x, size_t size, int p);
-
+float norm(float **x, size_t size, int p);
 
 /**
  * Computes the dot product of two same size vectors x, y.
@@ -58,7 +59,7 @@ float norm(float** x, size_t size, int p);
  * @param size size of x,y (sizes must match)
  * @return Dot product of x and y i.e. x^T*y
  */
-float dot(float** x, float** y, int size);
+float dot(float **x, float **y, int size);
 
 /**
  * Computes the matrix product of A and B, A*B = C
@@ -69,8 +70,7 @@ float dot(float** x, float** y, int size);
  * @param B matrix B
  * @return Pointer to product matrix i.e. A*B
  */
-float** matrixProduct(size_t m, size_t n, size_t p, float** A, float** B);
-
+float **matrixProduct(size_t m, size_t n, size_t p, float **A, float **B);
 
 /**
  * Computes the transpose of A i.e. A^T
@@ -79,8 +79,6 @@ float** matrixProduct(size_t m, size_t n, size_t p, float** A, float** B);
  * @param A the matrix to transpose
  * @return Pointer to the transposed matrix i.e. A^T
  */
-float** transpose(size_t m, size_t n, float** A);
-
+float **transpose(size_t m, size_t n, float **A);
 
 #endif
-
